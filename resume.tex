@@ -1,5 +1,5 @@
 %-------------------------
-% Resume in Latex
+% Resume in LaTeX
 % Author : Andrew Fantino
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
@@ -23,7 +23,8 @@
 \usepackage{fontawesome5}
 \input{glyphtounicode}
 
-%----------FONT OPTIONS----------
+\pdfgentounicode=1
+
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
@@ -72,6 +73,14 @@
   }
 }
 
+\newcommand{\resumeSubItem}[1]{
+  \begin{itemize}
+    \item\small{
+      {#1 \vspace{-2pt}}
+    }
+  \end{itemize}
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -94,9 +103,8 @@
   \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemiii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -109,181 +117,186 @@
 
 %----------HEADING----------
 \begin{center}
-  \textbf{\Huge \scshape Andrew Fantino} \\ \vspace{5pt}
+  \vspace{1.75em}
+  \textbf{\Huge \scshape Andrew Fantino} \\ \vspace{3pt}
   \small US Citizen $|$
   \small \faIcon{phone} (951) 355-8530 $|$ 
   \href{mailto:andrew.fantino.951@gmail.com}{ \faIcon{envelope} Andrew.Fantino.951@gmail.com } $|$ 
   \href{https://linkedin.com/in/andrew-fantino/}{ \faIcon{linkedin} andrew-fantino } $|$
   \href{https://github.com/afantino951}{ \faIcon{github} afantino951} 
 \end{center}
-\vspace*{-1.5em}
+% \vspace*{-1.75em}
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of California Los Angeles}{Expected June 2023}
-      {BS in Computer Engineering; Concentration in Business Management}{GPA: 3.59}
-      \vspace{-2pt}\item
-      \textbf{Coursework} \\
-        % For Software Resume
-        \small\quad Operating Systems, Digital Logic Design, Data Structures \& Algorithms, Digital Signal Processing
-        % IN PROGRESS CLASS: Algorithms \& Complexity
-        
-        % For Hardware Resume
-        % \small\quad Analog Circuits, Digital Signal Processing, Secure Computing Systems, Computer Architecture
-        % IN PROGRESS CLASS: Embedded Networked Systems
+      {University of California, Los Angeles (UCLA)}{Expected June 2024}
+      {MS Electrical \& Computer Engr. Focus in Circuits \& Embedded Systems}{}
+      \vspace{-40pt}\item
 
-        % For Digital Design
-        % \small\quad Digital Signal Processing, Digital Design Lab, Computer Architecture
-      \vspace{-7pt}
+    \resumeSubheading
+      {}{June 2023}
+      {BS Computer Engr. Concentration in Business Management}{GPA: 3.64}
+      \vspace{-6pt}\item
+      \textbf{Coursework} \\
+
+        \small\quad Operating Systems, Computer Security, Network Fundamentals, Algorithms \& Complexity
+        
+        % \small\quad Deep Learning for Computer Vision, Computer Architecture 
+        
+        % \small\quad Analog Circuits, Digital Electronic Circuits, Digital Signal Processing
 
   \resumeSubHeadingListEnd
 %-------------------------------
-
+% \vspace*{-1.75em}
 %-----------SKILLS--------------
 \section{Skills}
   \vspace*{-1.5em}
     \begin{multicols}{2}
       \begin{itemize}[leftmargin=0.15in, label={}]
         \small{\item{
-          \textbf{Programming Languages}{: C++, C, Python, Java, SystemVerilog, Reactjs, SQLite (SQLAlchemy)} \\
-          \textbf{Software}{: Linux, Git, Jira, Tableau, Solidworks, LaTeX}
+          \textbf{Programming Languages:}{ C, C++, Python, SystemVerilog, Reactjs} \\
+          \textbf{Software:}{ Linux, Git, Jira, Tableau, Solidworks, LaTeX}
         }}
         \columnbreak
         \small{\item{
-          \textbf{Hardware Tools}{: Lab Equipment, 3D printing, I2C Devices, SPI, UART, STM32, Arduino, ARMv7/v8 SoCs} \\
-          \textbf{PCB and Schematic Design}{: Autodesk Eagle, KiCad, LT Spice}
+          % FIXME When they ask for explicit lab equipemnt, add it here
+          \textbf{Hardware:}{ Lab Equipment, 
+          Arduino, ARMv7/v8 SoCs} \\
+          \textbf{Misc.:}{ 3D printing, I2C, SPI, UART, STM32, KiCad, Autodesk
+          Eagle, LT Spice}
         }}
       \end{itemize}
     \end{multicols}
-\vspace*{-2em}
 %--------------------------------
-
+% \vspace*{-1.75em}
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Viasat Inc.}{Carlsbad, CA}
-      {Software Engineer Intern}{June 2022 -- Sept. 2022}
+      {Software Engineer Intern}{June 2023 \-- Sept. 2023}
+      \resumeItemListStart
+        \resumeItem{
+          Ported custom Linux kernel drivers from 3.8 to 5.4 for embedded
+          software router
+        }
+        \resumeItem{
+          Cross-compiled kernel with OpenWRT and containerized code in LXC container 
+        }
+        \resumeItem{
+          Researched API changes in kernel changelogs to discern updates
+          between kernel versions
+        }
+      \resumeItemListEnd
+      \vspace{-15pt}
+
+    \resumeSubheading
+      {}{}
+      {Software Engineer Intern}{June 2022 \-- Sept. 2022}
       \resumeItemListStart
         \resumeItem{
           Researched and evaluated next generation user/kernel-space packet 
-          processing solutions, such as DPDK, XDP, and ODP for upcoming network 
+          processing solutions, such as DPDK, XDP, and ODP for network 
           encryption modules
         }
-        \resumeItem{
-          Loaded forwarding solutions on various ARMv7/v8 
-          SoCs for a 10x speedup from baseline Linux networking stack
+        % Make this better
+        \resumeItem{ 
+          Loaded layer 3 forwarding code on various
+          ARMv7/v8 SoMs with Yocto and Buildroot 
          }
         \resumeItem{
-          Applied Agile SCRUM process to report results to product owners for 
-          future development with automated test and analysis scripts written 
-          in Python
+          Automated test and analysis of packet processing software with Python 
+          for a 10x speedup from baseline Linux networking stack
         }
+        % \resumeItem{
+        %   Applied Agile SCRUM process to report results to product owners for 
+        %   future development 
+        % }
       \resumeItemListEnd
 
     \resumeSubheading
       {Ocean Aero Inc.}{San Diego, CA}
-      {Electrical Engineer Intern}{June 2021 -- Dec 2021}
+      {Electrical Engineer Intern}{June 2021 \-- Dec. 2021}
       \resumeItemListStart
         \resumeItem{
-          Developed firmware on ARM v7 MCU for autonomous water 
-          sampling project for University of Washington research group 
-          for detection of algael blooms in the Pacific Northwest
+          Architected firmware on ARM v7 MCU for autonomous water 
+          sampling project for University of Washington 
+          research group for detection of algal blooms in the Pacific Northwest
         }
         \resumeItem{
-          Prototyped a new iteration of proprietary power management/distribution 
-          system and implemented resulting circuit in production PCB with Autodesk Eagle
-          for next generation sailing submarines 
+          Enhanced functionality of ultrasonic anemometer test platform by
+          automating UART logging in existing firmware, resulting in a 4x
+          speedup and eliminating manual supervision
         }
         \resumeItem{
-          Implemented UART logging and automation features into existing 
-          firmware for ultrasonic anemometer test platform to speedup testing 
-          by 4x
+          Prototyped power management/distribution 
+          system and layout resulting PCB with Autodesk Eagle
         }
-    \resumeItemListEnd
+      \resumeItemListEnd
 
     \resumeSubheading
       {Qualcomm Inc.}{San Diego, CA}
-      {GSOC Ops Intern}{June 2020 -- Sept. 2020}
+      {GSOC Ops Intern}{June 2020 \-- Sept. 2020}
       \resumeItemListStart
         \resumeItem{
-          Developed new Tableau dashboards to improve UX which was implemented 
-          into production to be used by thousands of full-time staff
+          Created new Tableau dashboards to improve UX, pushed 
+          to production to be used by thousands of full-time staff
         }
-        \resumeItem{
-          Designed RESTful API in Python to connect web based tool 
-          to Tableau with a backend database of SQLite. 
-        }
+        % \resumeItem{
+        %   Designed RESTful API in Python to connect web based tool 
+        %   to Tableau with a backend database of SQLite. 
+        % }
       \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
 %-----------------------------
-
-\begin{comment}
-% STUFF THAT DOESN'T FIT NICELY EXPERIENCE OR PROJECTS 
+% \vspace*{-1.75em}
 %------OTHER EXPERIENCE-------
 \section{Other Experience}
   \resumeSubHeadingListStart      
     \resumeSubheading
       {IEEE at UCLA}{Los Angeles, CA}
-      {Project \& Lab Manager}{May 2022 -- June 2023}
+      {Project \& Lab Manager}{May 2022 \-- June 2023}
       \resumeItemListStart
         % \resumeItem{
         %   Advised project leads on administrative and technical matters related 
         %   to their projects and 200+ project members 
         % }
         \resumeItem{ % TODO: Need to fix this section's single quotes
-          Lead 'How to be an Officer' workshops to teach new officer technical 
-          and leadership skills such as how to use certain lab tools and conflict 
-          resolution
+          Spearheaded `How to be an Officer' workshops to teach new officer technical 
+          and leadership skills to new officers
         }
         \resumeItem{
-          Reviewed lectures, parts orders, and specification documents for 
+          Managed lectures, parts orders, and specification documents for 
           project leads to ensure smooth experience leading general members 
         }
-      \resumeItemListEn
-%------------------------------
-\end{comment}
-
-
-\begin{comment}
-% RESEARCH STUFF THAT DOESN'T FIT NICELY IN RESUME
-%------OTHER EXPERIENCE-------
-\section{Research}
-  \resumeSubHeadingListStart      
-
-    \resumeSubheading
-      {Nader Lab}{Los Angeles, CA}
-      {Lab Assistant}{May 2022 -- Present}
+      \resumeItemListEnd
+    \vspace{-15pt}
+    \resumeSubheading{}{}{Digital Audio Visualizer Project Lead}{May 2021 \-- June 2022}
       \resumeItemListStart
-        % \resumeItem{
-        %   TODO ADD SOMETHING HERE 
-        % }
-        \resumeItem{ % TODO: Need to fix this section's single quotes
-          TODO ADD SOMETHING HERE 
+        \resumeItem{
+          Taught 7 lectures on SystemVerilog, Digital Signal Processing, and serial communication 
+          protocols using Altera FPGA for 50+ students with 98\% completion rate
         }
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Integrated Bioelectronics Lab}{Los Angeles, CA}
-      {Lab Assistant}{May 2020 -- June 2020}
-      \resumeItemListStart
+        \resumeItem{
+          Designed piano and pipelined calculator projects assignments and updated 
+          lesson plans for in-person teaching
+        }  
+        % Need a way to bring the below point into the above points.
         % \resumeItem{
-        %   TODO ADD SOMETHING HERE 
+        %   Yearlong SystemVerilog program with projects on digital design and 
+        %   signal processing, including implementing 16pt FFT for the final 
+        %   digital audio visualizer using an FPGA with VGA output
         % }
-        \resumeItem{ % TODO: Need to fix this section's single quotes
-          TODO ADD SOMETHING HERE 
-        }
       \resumeItemListEnd
 
-   \resumeSubHeadingListEnd
-
+    \resumeSubHeadingListEnd
+  
 %------------------------------
-\end{comment}
-
+% \vspace*{-1.75em}
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
@@ -291,126 +304,109 @@
     % PICK THE PROJECTS THAT WOULD WORK BEST FOR THE POSITION
 
     % \resumeProjectHeading
-    % {\textbf{BOLDR} $|$ \emph{ReactJS, Firebase, Git, CSS}}{Mar. 2022}
-    % \resumeItemListStart
-    %   \resumeItem{
-    %     Created social media platform to rate difficulty and quality of 
-    %     bouldering problems and bookmark favorites. 
-    %   }
-    %   \resumeItem{
-    %     Used Firesbase Auth and Firestore with custom React hooks as a backend 
-    %     to store user data and local gym info.
-    %   }
-    % \resumeItemListEnd
-
-    % \resumeProjectHeading
-    %   {\textbf{Caster Counter} $|$ \emph{Arduino }}{Jan. 2022}
+    %   {\textbf{Just Guitar Ninja Dance} $|$ \emph{Arduino, Python, MQTT, Speech Recognition}}{Jun. 2023}
     %   \resumeItemListStart
     %     \resumeItem{
-    %       TODO ADD SOMETHING HERE 
+    %       Designed controller with ESP32 
     %     }
-    %   \resumeItemListEnd
-
-    % \resumeProjectHeading
-    %   {\textbf{FPGA Tic-Tac-Toe} $|$ \emph{Verilog, VGA Protocol}}{Dec. 2021}
-    %   \resumeItemListStart
     %     \resumeItem{
-    %       Designed and implemented a 2 player tic-tac-toe game on a Xilinx 
-    %       Spartan6 FPGA with VGA display 
+    %       Implemented speech recognition feature in Python
     %     }
     %   \resumeItemListEnd
 
     \resumeProjectHeading
-      {\textbf{Project Lead - Digital Audio Visualizer (IEEE)} $|$ \emph{SystemVerilog, Digital Design}}{June 2022}
+      {\textbf{Build Your Own Router} $|$ \emph{C, IP Routing}}{Dec. 2022}
       \resumeItemListStart
         \resumeItem{
-          Taught 7+ lectures on SystemVerilog, DSP, and serial communication 
-          protocols using Altera FPGA for 50+ students with 98\% completion 
-          rate
+          Implemented a software router with ARP functionality and Access
+          Control Lists in C++
         }
         \resumeItem{
-          Architected piano and pipelined calculator projects and updated 
-          existing lesson plans for in person teaching
-        }  
+          Tested performance and functionality in a Mininet virtual network inside
+          Docker container
+        }
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+    {\textbf{BOLDR} $|$ \emph{ReactJS, Firebase, Git, CSS}}{Mar. 2022}
+    \resumeItemListStart
+      \resumeItem{
+        Built social media platform to rate difficulty and quality of 
+        bouldering problems and bookmark favorites 
+      }
+      \resumeItem{
+        Used Firesbase Auth and Firestore with custom React hooks 
+        to securely store user data and gym info
+      }
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{FPGA Tic-Tac-Toe} $|$ \emph{Verilog, VGA Protocol}}{Dec. 2021}
+      \resumeItemListStart
         \resumeItem{
-          Yearlong SystemVerilog program with projects on digital design and 
+          Architected a 2-player tic-tac-toe game on a Xilinx Spartan6 FPGA with
+          VGA display with Verilog 
+        }
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Digital Audio Visualizer (IEEE)} $|$ \emph{SystemVerilog, VGA Protocol, Digital FFT}}{May. 2021}
+      \resumeItemListStart
+        \resumeItem{
+          Year-long SystemVerilog program with projects on digital design and 
           signal processing, including implementing 16pt FFT for the final 
           digital audio visualizer using an FPGA with VGA output
         }
       \resumeItemListEnd
 
-      % \resumeProjectHeading
-      %   {\textbf{Busy Signal} $|$ \emph{ESP32 wifi, IoT Devices, Google Calendar API}}{Jan. 2021}
-      %   \resumeItemListStart
-      %     \resumeItem{
-      %       TODO ADD SOMETHING HERE 
-      %     }
-      %     \resumeItem{
-      %       TODO ADD SOMETHING HERE 
-      %     }
-      %   \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Busy Signal} $|$ \emph{ESP32 WiFi, IoT Devices, Google Calendar API}}{Jan. 2021}
+      \resumeItemListStart
+        \resumeItem{
+          Designed IoT device mounted on door that reads Google Calendar data to inform
+          if person inside is in meeting
+        }
+      \resumeItemListEnd
 
-      \resumeProjectHeading
-        {\textbf{Micromouse (IEEE)} $|$ \emph{PCB Design, Embedded C, PID, Floodfill, STM32 MCUs}}{June 2020}
-        \resumeItemListStart
-          \resumeItem{
-            Worked with a small team to create an autonomous maze solving robot with a 
-            self-designed PCB and schematic
-          }
-          \resumeItem{
-            Implemented IR sensor fusion, wheel encoder distance calcuation, 
-            PID and Flood Fill algorithms in embedded C
-          }
-        \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Micromouse (IEEE)} $|$ \emph{PCB Design, Embedded C, PID, STM32 MCUs}}{June 2020}
+      \resumeItemListStart
+        \resumeItem{ 
+          Collaborated with team to create an autonomous maze solving robot
+          with a self-designed PCB and schematic
+        }
+        \resumeItem{
+          Implemented IR sensor fusion, wheel encoder distance calculation, PID
+          and Flood Fill algorithms in embedded C
+        }
+      \resumeItemListEnd
 
-      \resumeProjectHeading
-        {\textbf{Arduino Electrocardiogram} $|$ \emph{Arduino C, Laser Cutting, PCB Design}}{Mar. 2020}
-        \resumeItemListStart
-          \resumeItem{
-            Designed, built and tested an Arduino powered electrocardiogram 
-            using simple low and high pass filters to isolate frequencies of 
-            interest.
-          }
-          \resumeItem{
-            Added OLED display and battery power to view heartbeat without the 
-            need for an external display
-          }
-          \resumeItem{
-            Laser cut and assembled custom acrylic enclosure to enable hand-held 
-            portability at a low cost.
-          }
-        \resumeItemListEnd
-        
-      \resumeProjectHeading
-        {\textbf{BAC Measuring Cup} $|$ \emph{Arduino C, 3D Printing, Bluetooth}}{Jan. 2020}
-        \resumeItemListStart
-          \resumeItem{
-            Designed and programmed a weight-measuring cup consisting of an 
-            Arduino, a load cell, and basic Android app that tracks the user's 
-            BAC
-          }
-          \resumeItem{
-            IDEAHacks Sustainability Award
-          }
-        \resumeItemListEnd
-
-      % \resumeProjectHeading
-      %   {\textbf{IoT Skating Detection Machine Learning} $|$ \emph{C, Embedded ML}}{Dec. 2019}
-      %   \resumeItemListStart
-      %     \resumeItem{
-      %       asdfasdfadsfasdfasdfasdf
-      %     }
-      %   \resumeItemListEnd
-
-      % \resumeProjectHeading
-      %   {\textbf{Project Radian Robosub} $|$ \emph{Python, OpenCV, Solidworks}}{Aug. 2019}
-      %   \resumeItemListStart
-      %     \resumeItem{
-      %       Lead the programming development of a small team that built an autonomous 
-      %       underwater vehicle to complete complex vision challenges in competition 
-      %       against 40+ universities with a total cost of less than \$1500 
-      %     }
-      %   \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Arduino Electrocardiogram} $|$ \emph{Arduino C, Laser Cutting, PCB Design}}{Mar. 2020}
+      \resumeItemListStart
+        \resumeItem{
+          Developed an Arduino powered electrocardiogram 
+          using low and high pass filters to isolate frequencies of 
+          interest
+        }
+        \resumeItem{
+          Improved probability with OLED display and acrylic enclosure to
+          view heartbeat signal
+        }
+      \resumeItemListEnd
+      
+    \resumeProjectHeading
+      {\textbf{BAC Measuring Cup} $|$ \emph{Arduino C, 3D Printing, Bluetooth}}{Jan. 2020}
+      \resumeItemListStart
+        \resumeItem{
+          Designed and programmed a weight-measuring cup consisting of an 
+          Arduino, a load cell, and basic Android app to track user's 
+          BAC
+        }
+        \resumeItem{
+          IDEAHacks Sustainability Award
+        }
+      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
