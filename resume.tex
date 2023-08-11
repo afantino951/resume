@@ -89,6 +89,15 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeEducationSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
+      \textit{\small#3} & #2 \\
+      & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubSubheading}[2]{
   \item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -130,15 +139,15 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \resumeEducationSubheading
       {University of California, Los Angeles (UCLA)}{Expected June 2024}
       {MS Electrical \& Computer Engr. Focus in Circuits \& Embedded Systems}{}
-      \vspace{-40pt}\item
+      \vspace{-53pt}\item
 
-    \resumeSubheading
+    \resumeEducationSubheading
       {}{June 2023}
       {BS Computer Engr. Concentration in Business Management}{GPA: 3.64}
-      \vspace{-6pt}\item
+      \vspace{-20pt}\item
       \textbf{Coursework} \\
 
         \small\quad Operating Systems, Computer Security, Network Fundamentals, Algorithms \& Complexity
@@ -146,7 +155,7 @@
         % \small\quad Deep Learning for Computer Vision, Computer Architecture 
         
         % \small\quad Analog Circuits, Digital Electronic Circuits, Digital Signal Processing
-
+    \vspace{-2pt}
   \resumeSubHeadingListEnd
 %-------------------------------
 % \vspace*{-1.75em}
@@ -340,73 +349,73 @@
       }
     \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{FPGA Tic-Tac-Toe} $|$ \emph{Verilog, VGA Protocol}}{Dec. 2021}
-      \resumeItemListStart
-        \resumeItem{
-          Architected a 2-player tic-tac-toe game on a Xilinx Spartan6 FPGA with
-          VGA display with Verilog 
-        }
-      \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\textbf{FPGA Tic-Tac-Toe} $|$ \emph{Verilog, VGA Protocol}}{Dec. 2021}
+    %   \resumeItemListStart
+    %     \resumeItem{
+    %       Architected a 2-player tic-tac-toe game on a Xilinx Spartan6 FPGA with
+    %       VGA display with Verilog 
+    %     }
+    %   \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{Digital Audio Visualizer (IEEE)} $|$ \emph{SystemVerilog, VGA Protocol, Digital FFT}}{May. 2021}
-      \resumeItemListStart
-        \resumeItem{
-          Year-long SystemVerilog program with projects on digital design and 
-          signal processing, including implementing 16pt FFT for the final 
-          digital audio visualizer using an FPGA with VGA output
-        }
-      \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\textbf{Digital Audio Visualizer (IEEE)} $|$ \emph{SystemVerilog, VGA Protocol, Digital FFT}}{May. 2021}
+    %   \resumeItemListStart
+    %     \resumeItem{
+    %       Year-long SystemVerilog program with projects on digital design and 
+    %       signal processing, including implementing 16pt FFT for the final 
+    %       digital audio visualizer using an FPGA with VGA output
+    %     }
+    %   \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{Busy Signal} $|$ \emph{ESP32 WiFi, IoT Devices, Google Calendar API}}{Jan. 2021}
-      \resumeItemListStart
-        \resumeItem{
-          Designed IoT device mounted on door that reads Google Calendar data to inform
-          if person inside is in meeting
-        }
-      \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\textbf{Busy Signal} $|$ \emph{ESP32 WiFi, IoT Devices, Google Calendar API}}{Jan. 2021}
+    %   \resumeItemListStart
+    %     \resumeItem{
+    %       Designed IoT device mounted on door that reads Google Calendar data to inform
+    %       if person inside is in meeting
+    %     }
+    %   \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{Micromouse (IEEE)} $|$ \emph{PCB Design, Embedded C, PID, STM32 MCUs}}{June 2020}
-      \resumeItemListStart
-        \resumeItem{ 
-          Collaborated with team to create an autonomous maze solving robot
-          with a self-designed PCB and schematic
-        }
-        \resumeItem{
-          Implemented IR sensor fusion, wheel encoder distance calculation, PID
-          and Flood Fill algorithms in embedded C
-        }
-      \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\textbf{Micromouse (IEEE)} $|$ \emph{PCB Design, Embedded C, PID, STM32 MCUs}}{June 2020}
+    %   \resumeItemListStart
+    %     \resumeItem{ 
+    %       Collaborated with team to create an autonomous maze solving robot
+    %       with a self-designed PCB and schematic
+    %     }
+    %     \resumeItem{
+    %       Implemented IR sensor fusion, wheel encoder distance calculation, PID
+    %       and Flood Fill algorithms in embedded C
+    %     }
+    %   \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{Arduino Electrocardiogram} $|$ \emph{Arduino C, Laser Cutting, PCB Design}}{Mar. 2020}
-      \resumeItemListStart
-        \resumeItem{
-          Developed an Arduino powered electrocardiogram 
-          using low and high pass filters to isolate frequencies of 
-          interest
-        }
-        \resumeItem{
-          Improved probability with OLED display and acrylic enclosure to
-          view heartbeat signal
-        }
-      \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\textbf{Arduino Electrocardiogram} $|$ \emph{Arduino C, Laser Cutting, PCB Design}}{Mar. 2020}
+    %   \resumeItemListStart
+    %     \resumeItem{
+    %       Developed an Arduino powered electrocardiogram 
+    %       using low and high pass filters to isolate frequencies of 
+    %       interest
+    %     }
+    %     \resumeItem{
+    %       Improved probability with OLED display and acrylic enclosure to
+    %       view heartbeat signal
+    %     }
+    %   \resumeItemListEnd
       
-    \resumeProjectHeading
-      {\textbf{BAC Measuring Cup} $|$ \emph{Arduino C, 3D Printing, Bluetooth}}{Jan. 2020}
-      \resumeItemListStart
-        \resumeItem{
-          Designed and programmed a weight-measuring cup consisting of an 
-          Arduino, a load cell, and basic Android app to track user's 
-          BAC
-        }
-        \resumeItem{
-          IDEAHacks Sustainability Award
-        }
-      \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\textbf{BAC Measuring Cup} $|$ \emph{Arduino C, 3D Printing, Bluetooth}}{Jan. 2020}
+    %   \resumeItemListStart
+    %     \resumeItem{
+    %       Designed and programmed a weight-measuring cup consisting of an 
+    %       Arduino, a load cell, and basic Android app to track user's 
+    %       BAC
+    %     }
+    %     \resumeItem{
+    %       IDEAHacks Sustainability Award
+    %     }
+    %   \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
