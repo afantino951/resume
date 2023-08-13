@@ -94,7 +94,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} \\
       \textit{\small#3} & #2 \\
-      & \textit{\small #4} \\
+      & \small #4 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -165,16 +165,16 @@
     \begin{multicols}{2}
       \begin{itemize}[leftmargin=0.15in, label={}]
         \small{\item{
-          \textbf{Programming Languages:}{ C, C++, Python, SystemVerilog, Reactjs} \\
-          \textbf{Software:}{ Linux, Git, Jira, Tableau, Solidworks, LaTeX}
+          \textbf{Programming Languages:}{ C, C++, Python, Verilog} \\
+          \textbf{Misc.:}{ 3D printing, I2C, SPI, UART, KiCad, Autodesk
+          Eagle, LTspice}
         }}
         \columnbreak
         \small{\item{
           % FIXME When they ask for explicit lab equipemnt, add it here
+          \textbf{Software:}{ Linux, Git, Jira, Tableau, Solidworks, LaTeX}
           \textbf{Hardware:}{ Lab Equipment, 
-          Arduino, ARMv7/v8 SoCs} \\
-          \textbf{Misc.:}{ 3D printing, I2C, SPI, UART, STM32, KiCad, Autodesk
-          Eagle, LT Spice}
+          Arduino, STM32,  ARMv7/v8 SoCs} \\
         }}
       \end{itemize}
     \end{multicols}
@@ -208,21 +208,16 @@
         \resumeItem{
           Researched and evaluated next generation user/kernel-space packet 
           processing solutions, such as DPDK, XDP, and ODP for network 
-          encryption modules
+          encryption modules for a 10x speedup over baseline Linux networking stack
         }
         % Make this better
         \resumeItem{ 
-          Loaded layer 3 forwarding code on various
-          ARMv7/v8 SoMs with Yocto and Buildroot 
-         }
-        \resumeItem{
-          Automated test and analysis of packet processing software with Python 
-          for a 10x speedup from baseline Linux networking stack
+          Deployed layer 3 forwarding code with custom Yocto build system for various
+          ARMv7/v8 SoMs 
         }
-        % \resumeItem{
-        %   Applied Agile SCRUM process to report results to product owners for 
-        %   future development 
-        % }
+        \resumeItem{
+          Automated test and analysis of packet processing software with Python (NumPy/Matplotlib) 
+        }
       \resumeItemListEnd
 
     \resumeSubheading
@@ -241,40 +236,36 @@
         }
         \resumeItem{
           Prototyped power management/distribution 
-          system and layout resulting PCB with Autodesk Eagle
+          system and designed resulting PCB with Autodesk Eagle
         }
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Qualcomm Inc.}{San Diego, CA}
-      {GSOC Ops Intern}{June 2020 \-- Sept. 2020}
-      \resumeItemListStart
-        \resumeItem{
-          Created new Tableau dashboards to improve UX, pushed 
-          to production to be used by thousands of full-time staff
-        }
-        % \resumeItem{
-        %   Designed RESTful API in Python to connect web based tool 
-        %   to Tableau with a backend database of SQLite. 
-        % }
-      \resumeItemListEnd
+    % \resumeSubheading
+    %   {Qualcomm Inc.}{San Diego, CA}
+    %   {GSOC Ops Intern}{June 2020 \-- Sept. 2020}
+    %   \resumeItemListStart
+    %     \resumeItem{
+    %       Created new Tableau dashboards to improve UX, pushed 
+    %       to production to be used by thousands of full-time staff
+    %     }
+    %     % \resumeItem{
+    %     %   Designed RESTful API in Python to connect web based tool 
+    %     %   to Tableau with a backend database of SQLite. 
+    %     % }
+    %   \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
 %-----------------------------
 % \vspace*{-1.75em}
-%------OTHER EXPERIENCE-------
-\section{Other Experience}
+%------Volunteer EXPERIENCE-------
+\section{Volunteer Experience}
   \resumeSubHeadingListStart      
     \resumeSubheading
       {IEEE at UCLA}{Los Angeles, CA}
       {Project \& Lab Manager}{May 2022 \-- June 2023}
       \resumeItemListStart
-        % \resumeItem{
-        %   Advised project leads on administrative and technical matters related 
-        %   to their projects and 200+ project members 
-        % }
-        \resumeItem{ % TODO: Need to fix this section's single quotes
+        \resumeItem{
           Spearheaded `How to be an Officer' workshops to teach new officer technical 
           and leadership skills to new officers
         }
@@ -294,7 +285,7 @@
           Designed piano and pipelined calculator projects assignments and updated 
           lesson plans for in-person teaching
         }  
-        % Need a way to bring the below point into the above points.
+        % Maybe add a way to bring the below point into the above points.
         % \resumeItem{
         %   Yearlong SystemVerilog program with projects on digital design and 
         %   signal processing, including implementing 16pt FFT for the final 
@@ -336,18 +327,18 @@
         }
       \resumeItemListEnd
 
-    \resumeProjectHeading
-    {\textbf{BOLDR} $|$ \emph{ReactJS, Firebase, Git, CSS}}{Mar. 2022}
-    \resumeItemListStart
-      \resumeItem{
-        Built social media platform to rate difficulty and quality of 
-        bouldering problems and bookmark favorites 
-      }
-      \resumeItem{
-        Used Firesbase Auth and Firestore with custom React hooks 
-        to securely store user data and gym info
-      }
-    \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\textbf{Climbing Gym Rating Website} $|$ \emph{ReactJS, Firebase, Git, CSS}}{Mar. 2022}
+    %   \resumeItemListStart
+    %     \resumeItem{
+    %       Built social media platform to rate difficulty and quality of 
+    %       bouldering problems and bookmark favorites 
+    %     }
+    %     \resumeItem{
+    %       Used Firesbase Auth and Firestore with custom React hooks 
+    %       to securely store user data and gym info
+    %     }
+    % \resumeItemListEnd
 
     % \resumeProjectHeading
     %   {\textbf{FPGA Tic-Tac-Toe} $|$ \emph{Verilog, VGA Protocol}}{Dec. 2021}
@@ -377,35 +368,35 @@
     %     }
     %   \resumeItemListEnd
 
-    % \resumeProjectHeading
-    %   {\textbf{Micromouse (IEEE)} $|$ \emph{PCB Design, Embedded C, PID, STM32 MCUs}}{June 2020}
-    %   \resumeItemListStart
-    %     \resumeItem{ 
-    %       Collaborated with team to create an autonomous maze solving robot
-    %       with a self-designed PCB and schematic
-    %     }
-    %     \resumeItem{
-    %       Implemented IR sensor fusion, wheel encoder distance calculation, PID
-    %       and Flood Fill algorithms in embedded C
-    %     }
-    %   \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Micromouse (IEEE)} $|$ \emph{PCB Design, Embedded C, PID, STM32 MCUs}}{June 2020}
+      \resumeItemListStart
+        \resumeItem{ 
+          Collaborated with team to create an autonomous maze solving robot
+          with a self-designed PCB and schematic
+        }
+        \resumeItem{
+          Implemented IR sensor fusion, wheel encoder distance calculation, PID
+          and Flood Fill algorithms in embedded C
+        }
+      \resumeItemListEnd
 
-    % \resumeProjectHeading
-    %   {\textbf{Arduino Electrocardiogram} $|$ \emph{Arduino C, Laser Cutting, PCB Design}}{Mar. 2020}
-    %   \resumeItemListStart
-    %     \resumeItem{
-    %       Developed an Arduino powered electrocardiogram 
-    %       using low and high pass filters to isolate frequencies of 
-    %       interest
-    %     }
-    %     \resumeItem{
-    %       Improved probability with OLED display and acrylic enclosure to
-    %       view heartbeat signal
-    %     }
-    %   \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Arduino Electrocardiogram} $|$ \emph{Arduino C, Laser Cutting, PCB Design}}{Mar. 2020}
+      \resumeItemListStart
+        \resumeItem{
+          Developed an Arduino powered electrocardiogram 
+          using low and high pass filters to isolate frequencies of 
+          interest
+        }
+        \resumeItem{
+          Improved portability with OLED display and acrylic enclosure to
+          view heartbeat signal
+        }
+      \resumeItemListEnd
       
     % \resumeProjectHeading
-    %   {\textbf{BAC Measuring Cup} $|$ \emph{Arduino C, 3D Printing, Bluetooth}}{Jan. 2020}
+    %   {\textbf{Blood Alcohol Concentration Measuring Cup} $|$ \emph{Arduino C, 3D Printing, Bluetooth}}{Jan. 2020}
     %   \resumeItemListStart
     %     \resumeItem{
     %       Designed and programmed a weight-measuring cup consisting of an 
